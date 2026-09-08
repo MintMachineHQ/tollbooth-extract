@@ -1,7 +1,7 @@
 # TollBooth Extract 🛡️
 Live x402-gated HTML→JSON product extraction service.
 
-- **Price:** 0.05 USDC on Base (verified on-chain, no mock payments)
+- **Price:** 0.05 USDC on Base (verified on-chain, only REAL payments)
 - **Live catalog:** https://oncoming-headband-unsoiled.ngrok-free.dev/catalog
 - **Manifest:** https://oncoming-headband-unsoiled.ngrok-free.dev/x402-manifest.json
 
