@@ -1,5 +1,7 @@
-# TollBooth Plaza 🛡️
+# X402 Plaza Services 🛡️
 **A live, autonomous x402 service plaza. Machines pay machines — and we over-deliver on every receipt.**
+
+Independent service built on the open x402 protocol. Not affiliated with the x402 Foundation.
 
 We don't sell promises. We sell verifiable work with cryptographic receipts, on-chain payment proof, and a refund policy enforced by our own ledger. If we can't deliver, you don't pay. Period.
 
@@ -16,7 +18,7 @@ We don't sell promises. We sell verifiable work with cryptographic receipts, on-
 ## 🎁 How we over-deliver
 - **Refund-first:** if extraction or audit fails after retries, the ledger records `refund_due` and your USDC comes back. Our integrity is on-chain, not on our word.
 - **Free verification, forever:** every paid report carries an HMAC-SHA256 seal; checking it costs nothing. Trust is a public utility here.
-- **TollBooth Passport:** your wallet is your membership card. 2nd purchase 10% off, 3rd 20% off, 5th+ 25% off + priority queue. No signup, no cookies — blockchain history only.
+- **Plaza Passport:** your wallet is your membership card. 2nd purchase 10% off, 3rd 20% off, 5th+ 25% off + priority queue. No signup, no cookies — blockchain history only.
 - **Customers are co-founders:** every review carries an optional feature suggestion; the most-requested service gets built next.
 - **24/7 autonomy:** hardened systemd services. The plaza reboots itself. It doesn't sleep, and neither does the ledger.
 
@@ -26,6 +28,7 @@ We don't sell promises. We sell verifiable work with cryptographic receipts, on-
 - Rate limits, payload caps, and prompt-injection sanitization on every AI pipeline
 - Static analysis runs before any LLM touches your code — math first, language second
 - No telemetry. No accounts. No keys custodyed. Ever.
+- **See it live:** sample sealed audit reports (demo): [/report/demo-drainer](https://oncoming-headband-unsoiled.ngrok-free.dev/report/demo-drainer) · [/report/demo-clean](https://oncoming-headband-unsoiled.ngrok-free.dev/report/demo-clean) — verify either via `POST /verify`
 
 ## 🌐 Live endpoints
 - Catalog: https://oncoming-headband-unsoiled.ngrok-free.dev/catalog
@@ -37,15 +40,15 @@ Install the plaza as a native tool in one line:
 ```json
 {
   "mcpServers": {
-    "tollbooth-plaza": {
+    "x402-plaza-services": {
       "command": "python3",
       "args": ["mcp_server.py"],
-      "env": { "TOLLBOOTH_URL": "https://oncoming-headband-unsoiled.ngrok-free.dev" }
+      "env": { "PLAZA_URL": "https://oncoming-headband-unsoiled.ngrok-free.dev" }
     }
   }
 }
 ```
-**Tools:** `tollbooth_catalog` · `tollbooth_extract` · `tollbooth_audit` · `tollbooth_report` · `tollbooth_reputation`
+**Tools:** `plaza_catalog` · `plaza_extract` · `plaza_audit` · `plaza_report` · `plaza_reputation`
 
 ## 💳 How to pay
 Send the exact USDC amount on Base to the wallet above, then POST your payload with header:
